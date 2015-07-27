@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="LAW_SUMMARY">
+  <xs:complexType>
+    <xs:sequence>
+
+      <xs:element name="PART" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="HEAD" maxOccurs="unbounded">
+              <xs:complexType>
+		<xs:sequence>
+		  <xs:element name="SECTION" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                       <xs:attribute name="title" type="xs:string" use="required"/>
+                       <xs:attribute name="number" type="xs:integer" use="required"/>
+                       <xs:attribute name="start_par" type="xs:integer" use="required"/>
+                       <xs:attribute name="end_par" type="xs:integer" use="required"/>
+                    </xs:complexType>
+		  </xs:element>
+		</xs:sequence>
+                <xs:attribute name="title" type="xs:string" use="required"/>
+                <xs:attribute name="number" type="xs:integer" use="required"/>
+                <xs:attribute name="start_par" type="xs:integer" use="required"/>
+                <xs:attribute name="end_par" type="xs:integer" use="required"/>
+              </xs:complexType>	
+            </xs:element>
+          </xs:sequence>
+
+          <xs:attribute name="title" type="xs:string" use="required"/>
+          <xs:attribute name="number" type="xs:integer" use="required"/>
+          <xs:attribute name="start_par" type="xs:integer" use="required"/>
+          <xs:attribute name="end_par" type="xs:integer" use="required"/>
+        </xs:complexType>
+      </xs:element>
+
+    </xs:sequence>
+
+    <xs:attribute name="title" type="xs:string" use="required"/> 
+    <xs:attribute name="date" type="xs:date"/>
+    <xs:attribute name="lang" type="xs:string"/>
+    <xs:attribute name="parts" type="xs:integer" use="required"/>
+    <xs:attribute name="heads" type="xs:integer" use="required"/> 
+    <xs:attribute name="sections" type="xs:integer" use="required"/>
+    <xs:attribute name="paragraphs" type="xs:integer" use="required"/>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>

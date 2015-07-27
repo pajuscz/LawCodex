@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LAW_SUMMARY title="Občansý Zákoník" parts="5" heads="12" sections="123" paragraphs="3333">
+	<PART title="Obecná" number="1" start_par="1" end_par="654">
+		<HEAD title="hlava" number="1" start_par="1" end_par="654">
+			<SECTION title="hlava" number="1" start_par="1" end_par="654"/>
+		</HEAD> 
+		<HEAD title="hlava" number="1" start_par="1" end_par="654">
+			<SECTION title="hlava" number="1" start_par="1" end_par="654"/>  		
+		</HEAD> 
+		<HEAD title="hlava" number="1" start_par="1" end_par="654">
+			<SECTION title="hlava" number="1" start_par="1" end_par="654"/>
+		</HEAD> 
+	</PART>
+	<PART title="Obecná" number="1" start_par="1" end_par="654">
+		<HEAD title="hlava" number="1" start_par="1" end_par="654">
+			<SECTION title="hlava" number="1" start_par="1" end_par="654"/>
+		</HEAD> 
+		<HEAD title="hlava" number="1" start_par="1" end_par="654">
+			<SECTION title="hlava" number="1" start_par="1" end_par="654"/>
+			<SECTION title="hlava" number="1" start_par="1" end_par="654"/>
+		</HEAD> 
+	</PART>
+</LAW_SUMMARY>
+

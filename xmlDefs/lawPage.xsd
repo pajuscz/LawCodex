@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- definition of simple elements -->
+
+
+<!-- definition of attribudes -->
+<xs:attribute name="startPar" type="xs:integer"/>
+<xs:attribute name="endPar" type="xs:integer"/>
+<xs:attribute name="part" type="xs:integer"/>
+
+
+<!-- definition of complex elements -->
+<xs:element name="PARAGRAF">
+	<xs:complexType>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute ref="part"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="ODDELENI">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="PARAGRAF" maxOccurs="unbounded"/>
+			<xs:element ref="ODDELENI" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute ref="startPar"/>
+		<xs:attribute ref="endPar"/>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="PODODDIL">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="PARAGRAF" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="ODDELENI" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute ref="startPar"/>
+		<xs:attribute ref="endPar"/>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="ODDIL">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="PARAGRAF" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="PODODDIL" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute ref="startPar"/>
+		<xs:attribute ref="endPar"/>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="DIL">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="PARAGRAF" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="ODDIL" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute ref="startPar"/>
+		<xs:attribute ref="endPar"/>
+	</xs:complexType>
+</xs:element>
+
+
+<xs:element name="LAW_PAGE">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="DIL" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<!-- definition of structure -->
+
+
+</xs:schema>
